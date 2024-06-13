@@ -80,27 +80,93 @@ def coding_ex_1():
  
 # file.write(temp2)
 
-user_input = input("Enter a password:")
-password = [user_input]
-pass_count = [len(i)for i in password]
-if len(pass_count[0:]):
-   print("Strong Password")
-if len(pass_count[0:7]):
-    print('Password is weak')
+# user_input = input("Enter a password:")
+# password = [user_input]
+# pass_count = [len(i)for i in password]
+# if len(pass_count[0:]):
+#    print("Strong Password")
+# if len(pass_count[0:7]):
+#     print('Password is weak')
+
+  
+# def get_max():
+#     grades = [9.6, 9.2, 9.7]
+#     max_grades = max(grades)
+#     min_grades = min(grades)
+#     return f" Max:{max_grades},Min:{min_grades}"
+# print(get_max())
+
+
+def password_has_at_least_one_uppercase(password: str) -> bool:
+
+    return any([let.isupper() for let in password])
+
+
+    # for let in password:
+    #    if let.isupper():
+    #       return True
+       
+    # return False
+
+# [] -> list
+# () -> tuple
+# { 'k':v } -> dict
+# {a, b, c} -> set
+
+def password_has_at_least_one_digit(password: str) -> bool:
+   return any([char.isdigit() for char in password])
+
+    # for char in password:
+    #    if char.isdigit():
+    #       return True
+    # return False
+
+
+def strength(password):
+    if len(password) >= 8 and any([let.isupper() for let in password]) and any([char.isdigit() for char in password]):
+     return "Strong Password"   
+    
+    else:
+       return "Weak Password"
+    
+    
+
+def water_state(temperature):
+    if temperature <= 0:
+        return "Solid"
+    if temperature > 0 and temperature < 100 :
+        return "Liquid" 
+    if temperature >= 100:
+        return "Gas"
+
+
+
+def water_state(temperature):
+   FREEZING_POINT = 0
+   BOILING_POINT = 100
+   if temperature <= FREEZING_POINT :
+      return "Solid"
+   elif FREEZING_POINT< temperature < BOILING_POINT:
+      return "Liquid"
+   else :
+      return "Gas"
+
+
+
    
-
-
-
-
-
-
-
-
-
-
-
-   
-
+import datetime
+def heat(temperature : int):
+   Hot = temperature > 25
+   print(f"Hot: {Hot}, typeof(hot): {type(Hot)}")
+   Warm = 15 < temperature < 25
+   Cold = temperature < 15
+   if  Hot :
+      return"Hot"
+   if Warm :
+      return "Warm"
+   else: 
+      return "Cold"
+print(heat(7))
 
 
 

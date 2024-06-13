@@ -1,5 +1,3 @@
-play
-run
-playyyclean the bagclean the baggetjumprunwatcwatchgottemjump
-do something
-new
+jump
+hold
+craft

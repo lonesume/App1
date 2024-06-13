@@ -43,34 +43,40 @@
 # for i in buttons:
 #     break
 # print(i.capitalize())
-def dollars_to_euros():
-    dollars = float(input("Enter Dollar amount:"))
-    euros = dollars * 2
-    print("Euros:", euros)
+# def dollars_to_euros():
+#     dollars = float(input("Enter Dollar amount:"))
+#     euros = dollars * 2
+#     print("Euros:", euros)
 
-haystack = ['John', 'Sen', 'Lisa']
-haystack_lower = [hay.lower() for hay in haystack]
+# haystack = ['John', 'Sen', 'Lisa']
+# haystack_lower = [hay.lower() for hay in haystack]
 
-haystack_lower2 = []
-for hay in haystack:
-    haystack_lower2.append(hay)
+# haystack_lower2 = []
+# for hay in haystack:
+#     haystack_lower2.append(hay)
 
 
-print("hs_lower:", haystack_lower)
-needle = (input("Enter a name :")) 
-needle_lower = needle.lower()
+# print("hs_lower:", haystack_lower)
+# needle = (input("Enter a name :")) 
+# needle_lower = needle.lower()
 
 # old, case sensitive
 # print(haystack.index(needle)+1)
 
 # new, case in-sensitive
-print(haystack_lower.index(needle_lower)+1)
+# print(haystack_lower.index(needle_lower)+1)
 
 
 # for i in range(len(ranking)):
 #     name = ranking[i]
 #     if name == enter_name :
 #         print(i+1)
+
+def oz_mil(oz : int or float):
+    convert = 29.57353* oz
+    return f"oz:{oz}-> mL:{convert}"
+
+print(oz_mil(9))
 
 
 
