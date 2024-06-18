@@ -1,5 +1,7 @@
 import streamlit as st
 import Functions as cli
+from PIL import Image
+
 todos = cli.get_todos()
 def add_todo(): 
     todo = st.session_state["new_todo"]+"\n"
@@ -9,7 +11,9 @@ def add_todo():
 
 
 st.title("Lonesume's Todo app")
-st.image("brian-pfp-2.jpg", caption="Brian Joseph (circa May 2024)", width=350 )
+
+image = Image.open("brian-pfp-2.jpg")
+st.image(image, caption="Brian Joseph (circa May 2024)", width=350 )
 
 st.write("This app is to increase your productivity")
 
