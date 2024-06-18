@@ -12,7 +12,7 @@ def add_todo():
 
 st.title("Lonesume's Todo app")
 
-image = Image.open("brian-pfp-2.jpg")
+image = Image.open("brian-pfp-2.JPG")
 st.image(image, caption="Brian Joseph (circa May 2024)", width=350 )
 
 st.write("This app is to increase your productivity")
